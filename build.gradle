@@ -33,6 +33,12 @@ dependencies {
     // database
     runtimeOnly 'org.postgresql:postgresql'
 
+    // massage queue
+    implementation 'org.springframework.boot:spring-boot-starter-amqp'
+
+    // elasticsearch
+    implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+
     // test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

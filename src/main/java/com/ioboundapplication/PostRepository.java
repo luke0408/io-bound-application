@@ -1,6 +1,10 @@
 package com.ioboundapplication;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
-public interface PostRepository extends JpaRepository<Post, Long> {
+import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
+
+public interface PostRepository extends ElasticsearchRepository<Post, String> {
+	List<Post> findByContent(String content);
+
 }
